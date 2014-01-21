@@ -1,0 +1,150 @@
+extends ../layouts/layout
+
+block menu
+  mixin menu('projects')
+
+block prepend scripts-app
+  script#projectsjson(type='application/json' src='/js/projects.json')
+
+block content
+  div(ng-controller='ProjectsCtrl')
+
+  - if ( ! project || project === 'vsisoft' )
+    - if ( ! project )
+      .row
+        .small-12.medium-6.columns
+
+    a(href='/projects/vsisoft')
+      h3 Venus Software International
+      img.preview.vsisoft(src='/images/vsisoft.png')
+    
+    - if ( project === 'vsisoft' )
+      .row
+        .small-8.small-offset-2.columns
+          a.button.expand(href='http://vsisoft.com', target='__blank') View website
+
+      h4 Last Shipping
+      p 2014
+
+      h4 Front End
+      ul
+        li
+          a(href) HTML5
+        li
+          a(href) Bootstrap 2
+        li
+          a(href) LESS CSS
+        li
+          a(href) Jade
+        li
+          a(href) jQuery
+        li
+          a(href) Angular
+
+      h4 Back End
+      ul
+        li
+          a(href) Node
+        li
+          a(href) Express
+        li
+          a(href) PM2
+
+      .row
+        .small-8.small-offset-2.columns
+          a.button.expand.secondary(href='/projects') Go back to Projects
+
+  - if ( ! project || project === 'bluetrailsoft' )
+    - if ( ! project )
+        .small-12.medium-6.columns
+        
+    a(href='/projects/bluetrailsoft')
+      h3 Blue Trail Software
+      img.preview.bluetrailsoft(src='/images/bluetrailsoft.png')
+      
+    - if ( project === 'bluetrailsoft' )
+      .row
+        .small-8.small-offset-2.columns
+          a.button.expand(href='http://bluetrailsoft.com', target='__blank') View website
+
+      h4 Last Shipping
+      p 2013
+
+      h4 Front End
+      ul
+        li
+          a(href) HTML5
+        li
+          a(href) Foundation 5
+        li
+          a(href) SASS CSS
+        li
+          a(href) Jade
+        li
+          a(href) jQuery
+        li
+          a(href) Angular
+
+      h4 Back End
+      ul
+        li
+          a(href) Node
+        li
+          a(href) Express
+        li
+          a(href) PM2
+
+      .row
+        .small-8.small-offset-2.columns
+          a.button.expand.secondary(href='/projects') Go back to Projects
+
+  - if ( ! project || project === 'immobileaks' )
+    a(href='/projects/immobileaks')
+      h3 Immobileaks
+      img.preview.x(src='/images/immobileaks.png')
+    
+    - if ( project === 'immobileaks' )
+      .row
+        .small-8.small-offset-2.columns
+          a.button.expand(href='http://immobileaks.com', target='__blank') View website
+
+      h4 Last Shipping
+      p 2013
+
+      h4 Front End
+      ul
+        li
+          a(href) HTML5
+        li
+          a(href) Foundation 5
+        li
+          a(href) SASS CSS
+        li
+          a(href) Jade
+        li
+          a(href) jQuery
+        li
+          a(href) Angular
+
+      h4 Back End
+      ul
+        li
+          a(href) Node
+        li
+          a(href) Express
+        li
+          a(href) PM2
+
+      h4 Database
+      ul
+        li
+          a(href) MySQL
+
+      h4 API
+      ul
+        li
+          a(href) Google Maps
+
+      .row
+        .small-8.small-offset-2.columns
+          a.button.expand.secondary(href='/projects') Go back to Projects

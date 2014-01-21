@@ -1,0 +1,7 @@
+h2(ng-bind='skill')
+h3 Projects where I have used 
+  span(ng-bind='skill')
+  | :
+ul
+  li(ng-repeat='proj in projectsUsingSkill')
+    a(ng-href='#/projects/{{proj.slug}}', ng-bind='proj.name')

@@ -1,0 +1,20 @@
+mixin menu(selected)
+  - if ( ! selected )
+    a.button.secondary(href='/projects') Projects
+    a.button.secondary(href='/skills') Skills
+    a.button.secondary(href='/contact') Contact
+  
+  - else if ( selected === 'projects' )
+    a.button(href='/projects') Projects
+    a.button.secondary(href='/skills') Skills
+    a.button.secondary(href='/contact') Contact
+  
+  - else if ( selected === 'skills' )
+    a.button.secondary(href='/projects') Projects
+    a.button(href='/skills') Skills
+    a.button.secondary(href='/contact') Contact
+  
+  - else if ( selected === 'contact' )
+    a.button.secondary(href='/projects') Projects
+    a.button.secondary(href='/skills') Skills
+    a.button(href='/contact') Contact

@@ -1,0 +1,66 @@
+include ../mixins/menu
+
+doctype html
+
+block meta
+  meta(charset='utf-8')
+  meta(http-equiv="X-UA-Compatible", content="IE=edge")
+  meta(name="viewport", content="width=device-width, initial-scale=1.0")
+
+title Francois - Freelance
+
+block links
+
+block stylesheets
+  link(rel='stylesheet', href='/dev/bower_components/foundation/css/normalize.css')
+  link(rel='stylesheet', href='/dev/bower_components/foundation/css/foundation.min.css')
+  link(rel='stylesheet', href='/dev/bower_components/font-awesome/css/font-awesome.min.css')
+  link(rel='stylesheet', href='/stylesheets/francois-freelance.css')
+
+section(ng-app='francoisdev')
+  block banner
+    a(href='/')
+      h1 @Francois
+        small #developer
+  
+  block menu
+    nav(data-menu)
+      a.button(href='/#/projects' ng-class='{ "secondary": PAGE !== "projects" }') Projects
+      a.button(href='/#/skills' ng-class='{ "secondary": PAGE !== "skills" }') Skills
+      a.button(href='/#/about' ng-class='{ "secondary": PAGE !== "about" }') About
+
+  block content
+    div(ng-view)
+
+  block footer
+    footer
+      hr
+      p version 0.0.1
+
+block scripts-dependencies
+  script(src='/dev/bower_components/jquery/jquery.min.js')
+  
+  script(src='/dev/bower_components/angular/angular.min.js')
+
+  script(src='/dev/bower_components/angular-route/angular-route.min.js')
+
+  script(src='/dev/bower_components/foundation/js/foundation.min.js')
+  
+  script.
+    $(document).foundation();
+
+block scripts-app
+  script(src='/app/services/projects.js')
+  script(src='/app/services/skills.js')
+  script(src='/app/directives/home.js')
+  script(src='/app/directives/projects.js')
+  script(src='/app/directives/project.js')
+  script(src='/app/directives/skills.js')
+  script(src='/app/directives/skill.js')
+  script(src='/app/routes/projects.js')
+  script(src='/app/routes/project.js')
+  script(src='/app/routes/skills.js')
+  script(src='/app/routes/skill.js')
+  script(src='/app/routes/home.js')
+  script(src='/app/routes/about.js')
+  script(src='/app/index.js')

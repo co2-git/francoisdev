@@ -1,0 +1,33 @@
+.row
+  .small-12.columns
+    h3(ng-bind='project.name')
+
+    img.preview(ng-src='/images/{{project.slug}}.png')
+
+    a(ng-href='{{project.url}}', target='_blank').button.expand View website
+
+    h4(ng-show='project.stack.front') Front-End
+
+    ul
+      li(ng-repeat='front in project.stack.front')
+        a(href='#/skills/{{front | slugify}}', ng-bind='front')
+
+    h4(ng-show='project.stack.back') Back-End
+
+    ul
+      li(ng-repeat='back in project.stack.back')
+        a(href='#/skills/{{back | slugify}}', ng-bind='back')
+
+    h4(ng-show='project.stack.db') Database
+
+    ul
+      li(ng-repeat='db in project.stack.db')
+        a(href='#/skills/{{db | slugify}}', ng-bind='db')
+
+    h4(ng-show='project.stack.api') API
+
+    ul
+      li(ng-repeat='api in project.stack.api')
+        a(href='#/skills/{{api | slugify}}', ng-bind='api')
+
+    a(href='#/projects').button.secondary.expand Go back to Projects

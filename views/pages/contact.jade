@@ -1,0 +1,14 @@
+extends ../layouts/layout
+
+block menu
+  mixin menu('contact')
+
+block content
+  form
+    .row
+      .small-12.columns
+        textarea(placeholder='Write your message here')
+
+    .row
+      .small-12.columns
+        button.expand Send

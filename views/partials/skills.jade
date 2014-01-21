@@ -1,0 +1,29 @@
+.row
+	.small-12.medium-6.columns
+		h2 Front-End
+
+		ul
+			li(ng-repeat='skill in skills.front | orderBy:identity')
+				a(ng-href='#/skills/{{skill | slugify}}', ng-bind='skill')
+
+	.small-12.medium-6.columns
+		h2 Back-End
+
+		ul
+			li(ng-repeat='skill in skills.back | orderBy:identity')
+				a(ng-href='#/skills/{{skill | slugify}}', ng-bind='skill')
+
+.row
+	.small-12.medium-6.columns
+		h2 Database
+
+		ul
+			li(ng-repeat='skill in skills.db | orderBy:identity')
+				a(ng-href='#/skills/{{skill | slugify}}', ng-bind='skill')
+
+	.small-12.medium-6.columns
+		h2 API
+
+		ul
+			li(ng-repeat='skill in skills.api | orderBy:identity')
+				a(ng-href='#/skills/{{skill | slugify}}', ng-bind='skill')
