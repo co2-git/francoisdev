@@ -6,6 +6,8 @@ function projectsDirective () {
       $scope.switchView = function (project) {
         $scope.projectView = project;
         location.hash = '#/projects/' + project;
+        $(document).scrollTop(0);
+        console.log('hola');
       };
     }
   };

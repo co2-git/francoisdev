@@ -9,6 +9,7 @@ function ProjectsRoute (selected) {
 
       if ( selected ) {
         $scope.projectView = $routeParams.project;
+        $(window).scrollTop(0);
       }
 
       ProjectsService.get($rootScope);
