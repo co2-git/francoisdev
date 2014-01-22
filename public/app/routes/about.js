@@ -1,6 +1,6 @@
 function AboutRoute () {
   return {
-    template: '<frdev-home/>',
+    template: '<frdev-about/>',
 
     controller: function ($rootScope) {
       $rootScope.PAGE = 'about';

@@ -27,11 +27,10 @@ ngModule
   })
   
   .directive({
-    frdevHome: homeDirective,
     frdevProjects: projectsDirective,
-    frdevProject: projectDirective,
     frdevSkills: skillsDirective,
-    frdevSkill: skillDirective
+    frdevSkill: skillDirective,
+    frdevAbout: aboutDirective
   })
 
   .config(function ($routeProvider, $locationProvider) {
